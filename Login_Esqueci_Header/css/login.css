@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap%27');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --branco: #eaeff1;
     --roxo: #451f4e;
     --violeta: #73256b;
@@ -15,17 +15,17 @@
     --preto: black;
 }
 
-.navbar-brand{
+.navbar-brand {
     font-size: 3rem;
     font-weight: bold;
     color: red;
 }
 
-.offcanvas-body{
+.offcanvas-body {
     font-size: 20px;
 }
 
-a .nav-item{
+a .nav-item {
     font-weight: bold;
 }
 
@@ -104,31 +104,22 @@ a:hover {
 }
 
 .divSenha {
-    display: inline-flex;
-    justify-content: center;
-    align-content: center;
-    gap: 20px;
+    position: relative;
 }
 
-#senha {
-    width: 90vw;
-    margin-bottom: 5px;
-}
+.botaoVS {
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 23px !important;
+    width: 23px !important;
+    background-image: url("../assets/olho.png");
+    opacity: 0.4;
 
-.divSenha button {
-    display: inline-flex;
-    justify-content: center;
-    align-self: center;
-    width: 5vw; 
-    height: 30px;
     border: none;
-    cursor: pointer; 
-
-    background-image: url(../assets/olho.png);
-    background-color: var(--branco);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    outline: none;
+    cursor: pointer;
 }
 
 #esqueci {
@@ -141,7 +132,7 @@ a:hover {
     font-size: 1.3rem;
     font-weight: 600;
     transition: all linear 160ms;
-    cursor: pointer; 
+    cursor: pointer;
     padding: 15px;
     border: 1px solid var(--violeta);
     margin-bottom: 10px;

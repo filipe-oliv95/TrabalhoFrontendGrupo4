@@ -1,3 +1,6 @@
+//Fazer via LocalStorage
+//  Salvar ela criptografada 
+
 var usuarios = [
     {
         "login": "12345678@gmail.com",
@@ -9,9 +12,9 @@ var usuarios = [
     }
 ]
 
-const getUsuario = document.getElementById("user");
-const getSenha = document.getElementById("senha");
-const getnewPassword = document.getElementById("senha");
+// const getUsuario = document.getElementById("user");
+// const getSenha = document.getElementById("senha");
+// const getnewPassword = document.getElementById("senha");
 
 // Função do olho (visualizar a senha)
 
@@ -26,56 +29,50 @@ function olharSenha() {
     }
 }
 
-//Função Esquecer Senha - não sei se será implementado
-
 //Função para Login
 
-function logar() {
+// function logar() {
 
-    var index = usuarios.findIndex(function (usuarios, i) {
-        return usuarios.login === getUsuario.value;
-    })
+//     var index = usuarios.findIndex(function (usuarios, i) {
+//         return usuarios.login === getUsuario.value;
+//     })
 
-    if (index === -1) {
-        alert("Usuário inexistente")
-    }
-    else if (usuarios[index].login === getUsuario.value && usuarios[index].senha === window.btoa(getSenha.value)) {
-        alert("Logado")
-    }
-    else {
-        alert("Senha incorreta")
+//     if (index === -1) {
+//         alert("Usuário inexistente")
+//     }
+//     else if (usuarios[index].login === getUsuario.value && usuarios[index].senha === window.btoa(getSenha.value)) {
+//         alert("Logado")
+//     }
+//     else {
+//         alert("Senha incorreta")
+//     }
+// }
+
+//Logar Local Storage
+
+const getUsuario = document.getElementById("user");
+const getSenha = document.getElementById("senha");
+
+function loginLocalStorage() {
+    var confirmacao = localStorage.getItem(getUsuario.value);
+
+    if (confirmacao != null) {
+        if (confirmacao === window.btoa(getSenha.value)) {
+            alert("Logado")
+        }
     }
 }
 
-// var typePassword1 = document.getElementById("newPs1");
-// var typePassword2 = document.getElementById("newPs2");
-
-// //Visualizar senha Redefinir Senha
-
-// function olharSenhaRedefinir() {
-//     var verificar = typePassword1.getAttribute("type");
-
-//     if (verificar == "password") {
-//         typePassword1.setAttribute('type', 'text');
-//         typePassword2.setAttribute('type', 'text');
-//     } else if (verificar == 'text') {
-//         typePassword1.setAttribute('type', 'password');
-//         typePassword2.setAttribute('type', 'password');
-//     }
-// }
+const getNewP1 = document.getElementById("newPs1")
+const getNewP2 = document.getElementById("newPs2")
 
 //Redefinir senha
 
 function changePassword() {
-    var index = usuarios.findIndex(function (usuarios, i) {
-        return usuarios.login === getUsuario.value;
-    })
+    var confirmacao = localStorage.getItem(getUsuario.value);
 
-    if (index === -1) {
-        alert("Usuário inexistente")
-    }
-    else if (usuarios[index].login === getUsuario.value && (typePassword1.value === typePassword2.value)) {
-        usuarios[index].senha = window.btoa(typePassword1.value);
+    if (confirmacao != null && getNewP1.value === getNewP2.value) {
+        localStorage.setItem(getUsuario.value, window.btoa(getNewP2.value))
         alert("Senha alterada");
     }
 }
