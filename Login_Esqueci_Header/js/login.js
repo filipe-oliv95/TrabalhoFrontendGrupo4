@@ -1,21 +1,3 @@
-//Fazer via LocalStorage
-//  Salvar ela criptografada 
-
-var usuarios = [
-    {
-        "login": "12345678@gmail.com",
-        "senha": "MTIzNDU2Nzg="
-    },
-    {
-        "login": "G4121212@gmail.com",
-        "senha": "RzQxMjEyMTI="
-    }
-]
-
-// const getUsuario = document.getElementById("user");
-// const getSenha = document.getElementById("senha");
-// const getnewPassword = document.getElementById("senha");
-
 // Função do olho (visualizar a senha)
 
 function olharSenha() {
@@ -28,25 +10,6 @@ function olharSenha() {
         typePassword.setAttribute('type', 'password');
     }
 }
-
-//Função para Login
-
-// function logar() {
-
-//     var index = usuarios.findIndex(function (usuarios, i) {
-//         return usuarios.login === getUsuario.value;
-//     })
-
-//     if (index === -1) {
-//         alert("Usuário inexistente")
-//     }
-//     else if (usuarios[index].login === getUsuario.value && usuarios[index].senha === window.btoa(getSenha.value)) {
-//         alert("Logado")
-//     }
-//     else {
-//         alert("Senha incorreta")
-//     }
-// }
 
 //Logar Local Storage
 
@@ -61,6 +24,12 @@ function loginLocalStorage() {
             alert("Logado")
         }
     }
+    else if (confirmacao === null) {
+        alert("Usuário não encontrado")
+    }
+    else {
+        alert("Senha incorreta")
+    }
 }
 
 const getNewP1 = document.getElementById("newPs1")
@@ -74,6 +43,12 @@ function changePassword() {
     if (confirmacao != null && getNewP1.value === getNewP2.value) {
         localStorage.setItem(getUsuario.value, window.btoa(getNewP2.value))
         alert("Senha alterada");
+    }
+    else if (confirmacao === null) {
+        alert("Usuário não encontrado")
+    }
+    else if (getNewP1.value != getNewP2.value) {
+        alert("Senhas são diferentes")
     }
 }
 
