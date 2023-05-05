@@ -1,36 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap%27');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins';
 }
 
-:root{
-    --branco: #eaeff1;
-    --roxo: #451f4e;
-    --violeta: #73256b;
-    --vermelho: #bc1c2d;
-    --azul: #14017c;
-    --preto: black;
+:root {
+    --first-color: #5d051f;
+    --second-color: #89192e;
+    --third-color: #ba6e7e;
+    --fourth-color: #d4cdce; /*cinza*/
+    --white-color: #FFF;
+    --black-color: #000;
 }
-
-.navbar-brand{
+.navbar-brand {
     font-size: 3rem;
     font-weight: bold;
     color: red;
+    margin: 0;
+    padding: 0;
 }
 
-.offcanvas-body{
+.logo {
+    margin: 0;
+    max-width: 150px;
+}
+
+.offcanvas-body {
     font-size: 20px;
 }
 
-a .nav-item{
+.navbar-toggler {
+    border: 1px solid rgb(225, 225, 225);
+}
+
+a .nav-item {
     font-weight: bold;
 }
 
 body {
     color: var(--preto);
+    margin-top: 90px;
+}
+
+body {
+    color: var(--black-color);
     margin-top: 90px;
 }
 
@@ -51,7 +67,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    background-color: var(--branco);
+    background-color: var(--white-color);
     width: 25rem;
     border-radius: 7px;
     padding: 30px;
@@ -70,7 +86,7 @@ h1 {
 input {
     padding: 15px;
     font-size: 1.3em;
-    border: 1px solid var(--violeta);
+    border: 1px solid var(--third-color);
     margin-bottom: 20px;
     margin-top: 5px;
     border-radius: 4px;
@@ -79,7 +95,7 @@ input {
 }
 
 .container input:focus {
-    border: 1px solid var(--roxo);
+    border: 1px solid var(--first-color);
 }
 
 label {
@@ -92,12 +108,12 @@ a {
     justify-content: center;
     margin-bottom: 20px;
     font-size: 1.2em;
-    color: var(--preto);
+    color: var(--first-color);
     cursor: pointer;
 }
 
 a:hover {
-    color: var(--violeta);
+    color: var(--second-color);
 }
 
 .divSenha {
@@ -118,14 +134,14 @@ a:hover {
 }
 
 .btn {
-    background-color: var(--violeta);
-    color: #fff;
+    background-color: var(--first-color);
+    color: var(--white-color);
     font-size: 1.3rem;
     font-weight: 600;
     transition: all linear 16ms;
     cursor: pointer; 
     padding: 15px;
-    border: 1px solid var(--violeta);
+    border: 1px solid var(--black-color);
     margin-bottom: 10px;
     margin-top: 15px;
     border-radius: 4px;
@@ -134,5 +150,6 @@ a:hover {
 
 .btn:hover {
     transform: scale(1.05);
-    background-color: var(--roxo);
+    background-color: var(--second-color);
+    color: var(--white-color);
 }
