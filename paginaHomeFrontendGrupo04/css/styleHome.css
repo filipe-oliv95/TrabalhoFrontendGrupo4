@@ -3,16 +3,63 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+
 }
 
+/*HEADER*/
+
+.navbar-brand {
+    font-size: 3rem;
+    font-weight: bold;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    margin: 0;
+    max-width: 150px;
+}
+
+.offcanvas-body {
+    font-size: 20px;
+}
+.navbar-toggler-icon {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url("../img/background-img/hamburguer.png");
+}
+.navbar-toggler {
+    border: 1px solid rgb(225, 225, 225);
+
+}
+
+/* .navbar-brand img {
+    max-width: 150px;
+    border: 1px solid red;
+    height: auto;
+    width: 30%;
+} */
+
+a .nav-item {
+    font-weight: bold;
+}
+
+body {
+    color: var(--preto);
+    margin-top: 90px;
+}
+/*HEADER*/
+
+
+
+
 #container-main {
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+   
 }
 
 /* -------------------------------------------------------------------- */
@@ -21,7 +68,6 @@
 
 #text {
     text-transform: uppercase;
-    font-family: inherit;
 }
 
 .text1 {
@@ -52,7 +98,6 @@ p {
 }
 
 #container-home-1 {
-    font-family: inherit;
     height: 400px;
     width: 100%;
 
@@ -62,7 +107,7 @@ p {
     flex-direction: column;
     align-items: center;
 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://img.freepik.com/fotos-gratis/a-paisagem-bonita-do-sol-da-praia-com-um-barco_1112-212.jpg?w=2000");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/background-img/background6.png");
     background-size: cover;
     background-position: center center;
 }
@@ -73,7 +118,7 @@ p {
     width: 150px;
     height: 30px;
     /* border-radius: 0; */
-    background-color: rgb(122, 19, 19);
+    background-color: var(--first-color);
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -84,7 +129,6 @@ p {
 
 #container-home-2 h2,
 p {
-    font-family: inherit;
     text-align: left;
     padding: 10px;
 }
@@ -109,6 +153,7 @@ p {
 
 @media (max-width: 1300px) {
     #container-home-2 {
+
       flex-direction: column;
       align-items: center;
     }
@@ -120,6 +165,9 @@ p {
     }
     .title-bt h2{
         text-align: center !important;
+    }
+    .carousel-item .img-fluid {
+        max-width: 200px;
     }
   }
 
