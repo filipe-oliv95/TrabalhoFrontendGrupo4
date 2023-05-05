@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 4 Multi Item Carousel</title>
+    <meta name="description"
+        content="A Bootstrap 4 carousel that advances one at a time. This example shows 4 slides on medium, 6 slides on large, and moves one slide at a time. On smaller screens the carousel shows only one slide at a time." />
+    <!--stylesheets / link tags loaded here-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+<body>
+
+    <div id="container-main">
+        <header>
+            <h1>header</h1>
+        </header>
+        <div id="container-home-1">
+            <p id="text" class="text1">Precisando de alguma figurinha?</p>
+            <p id="text" class="text2">Aqui você encontra!</p>
+            <p id="text" class="text3">Frete grátis acima de 10 unidades</p>
+            <button class="shop-button">Shop ➜</button>
+            <!-- arrows ↓↳➜⇢➤▶◀← ↑ → ↓ ↚ ↛ ↜ ↝ ↞ ↟ -->
+        </div>
+        <div id="container-home-2">
+            <div id="description">
+                <h2>Não perca tempo comprando pacotinhos!</h2>
+                <p>Se você é um verdadeiro apaixonado por futebol e pela Copa do Mundo, não pode perder a oportunidade
+                    de completar o seu álbum de figurinhas. Comprar em nosso site é muito fácil, rápido e seguro. Não
+                    perca mais tempo procurando em lojas físicas ou se frustrando por não encontrar as figurinhas que
+                    precisa. Compre agora mesmo em nosso site e sinta a emoção de preencher cada página do seu álbum.
+                </p>
+            </div>
+
+            <!-- BOOTSTRAP -->
+            <div class="container text-center my-3">
+                <div class="title-bt">
+                    <h2 class="font-weight-light">TOP 10 figurinhas mais vendidas</h2>
+                </div>
+                <div class="row mx-auto my-auto">
+                    <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+                        <div class="carousel-inner w-100" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="col-lg-2 col-md-3">
+                                    <img class="img-fluid" src="./assets/brasil_alisson.png">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3">
+                                    <img class="img-fluid" src="./assets/brasil_eder_militao.png">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3">
+                                    <img class="img-fluid" src="./assets/brasil_lucas_paqueta.png">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3">
+                                    <img class="img-fluid" src="./assets/brasil_neymar.png">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3">
+                                    <img class="img-fluid" src="./assets/brasil_richarlison.png">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-lg-2 col-md-3">
+                                    <img class="img-fluid" src="./assets/brasil_thiago_silva.png">
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev bg-dark w-auto" href="#recipeCarousel" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next bg-dark w-auto" href="#recipeCarousel" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- BOOTSTRAP -->
+        </div>
+        <footer>
+            <h1>footer</h1>
+        </footer>
+    </div>
+
+
+
+
+    <!--scripts loaded here-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="scriptHome.js"></script>
+</body>
+
+</html>
