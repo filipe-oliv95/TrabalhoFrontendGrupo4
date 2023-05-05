@@ -104,7 +104,32 @@ a:hover {
 }
 
 .divSenha {
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
     position: relative;
+}
+
+#senha {
+    width: 90vw;
+    margin-bottom: 5px;
+}
+
+.divSenha button {
+    display: inline-flex;
+    justify-content: center;
+    align-self: center;
+    width: 10vw; 
+    height: 30px;
+    border: none;
+    cursor: pointer; 
+
+    background-image: url(../assets/olho.png);
+    background-color: var(--branco);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .botaoVS {
@@ -116,7 +141,7 @@ a:hover {
     width: 23px !important;
     background-image: url("../assets/olho.png");
     opacity: 0.4;
-
+    border-radius: 30%;
     border: none;
     outline: none;
     cursor: pointer;
@@ -132,7 +157,7 @@ a:hover {
     font-size: 1.3rem;
     font-weight: 600;
     transition: all linear 160ms;
-    cursor: pointer;
+    cursor: pointer; 
     padding: 15px;
     border: 1px solid var(--violeta);
     margin-bottom: 10px;
