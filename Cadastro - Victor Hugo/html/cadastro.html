@@ -89,11 +89,12 @@
       <div class="pageRegister">
         <div class="divRegister">
           <h1>Cadastre-se</h1>
+          <form onSubmit="cadastrar()">
           <label for="email">E-mail</label>
           <input type="email" id="email" required/>
           <label for="password">Senha</label>
           <div class="divSenha">
-            <input type="password" id="senha" autocomplete="off"required/>
+            <input type="password" id="senha" autocomplete="off" required/>
             <button
               class="botaoVS btn-default"
               type="button"
@@ -111,7 +112,8 @@
           </div>
           <label for="address">Endereço completo</label>
           <input type="address" id="endereco" required/>
-          <button class="btn" onclick="cadastrar()">Cadastrar</button>
+          <button class="btn" type="submit">Cadastrar</button>
+        </form>
           <a href="login.html"> Já é cliente? Clique aqui e faça login.</a>
         </div>
       </div>
