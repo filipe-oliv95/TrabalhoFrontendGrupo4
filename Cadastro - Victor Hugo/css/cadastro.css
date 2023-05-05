@@ -120,13 +120,26 @@ a:hover {
     color: var(--violeta);
 }
 
+#email {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
 .divSenha {
     display: inline-flex;
     justify-content: center;
     align-content: center;
     gap: 20px;
     position: relative;
+    width: 100%;
 }
+
+#senha {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+
 
 .divConfirmacaoSenha {
     display: inline-flex;
@@ -134,15 +147,11 @@ a:hover {
     align-content: center;
     gap: 20px;
     position: relative;
-}
-
-#senha {
-    width: 90vw;
-    margin-bottom: 5px;
+    width: 100%;
 }
 
 #confirmacaoSenha {
-    width: 90vw;
+    width: 100%;
     margin-bottom: 5px;
 }
 
@@ -153,13 +162,18 @@ a:hover {
     width: 5vw; 
     height: 30px;
     border: none;
-    cursor: pointer; 
+    cursor: pointer;
 
     background-image: url(../assets/olho.png);
     background-color: var(--branco);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+#endereco {
+    width: 100%;
+    margin-bottom: 5px;
 }
 
 .divConfirmacaoSenha button {
@@ -193,7 +207,7 @@ a:hover {
     cursor: pointer;
 }
 
-.btn {
+.submit {
     background-color: var(--violeta);
     color: #fff;
     font-size: 1.3rem;
@@ -206,9 +220,10 @@ a:hover {
     margin-top: 5px;
     border-radius: 4px;
     outline: none;
+    width: 100%;
 }
 
-.btn:hover {
+.submit:hover {
     transform: scale(1.05);
     background-color: var(--roxo);
 }
