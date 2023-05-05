@@ -19,41 +19,40 @@ const getnewConfirmacaoSenha = document.getElementById("confirmacaoSenha");
 const getnewEndereco = document.getElementById("endereco");
 
 function cadastrar() {
+    var confirmacao = localStorage.getItem(getEmail.value);
 
-    var index = usuario.findIndex(function (usuario, i) {
-        return usuario.email === getUsuario.value;
-    })
-
-    if (index === -1) {
-        alert("Usuário já cadastrado!")
+    if (confirmacao != null) {
+        alert("Usuário já existente")
     }
-    else if (usuario[index].email === getUsuario.value && usuario[index].senha === window.btoa(getSenha.value)) {
-        alert("Usuário cadastrado com sucesso!")
+
+    else if (confirmacao === null && getSenha.value === getnewConfirmacaoSenha.value) {
+        localStorage.setItem(getEmail.value, window.btoa(getnewConfirmacaoSenha.value))
+        alert("Usuário cadastrado com sucesso!");
     }
     else {
-        alert("Tente novamente!")
+            alert("As senhas não conferem, verifique e tente novamente!")
+        }
     }
-}
 
-function olharSenha() {
-    var typePassword = document.getElementById("senha");
-    var verificar = typePassword.getAttribute("type");
+    function olharSenha() {
+        var typePassword = document.getElementById("senha");
+        var verificar = typePassword.getAttribute("type");
 
-    if (verificar == "password") {
-        typePassword.setAttribute('type', 'text');
-    } else if (verificar == 'text') {
-        typePassword.setAttribute('type', 'password');
+        if (verificar == "password") {
+            typePassword.setAttribute('type', 'text');
+        } else if (verificar == 'text') {
+            typePassword.setAttribute('type', 'password');
+        }
     }
-}
 
-function olharConfirmacaoSenha() {
-    var typePassword = document.getElementById("confirmacaoSenha");
-    var verificar = typePassword.getAttribute("type");
+    function olharConfirmacaoSenha() {
+        var typePassword = document.getElementById("confirmacaoSenha");
+        var verificar = typePassword.getAttribute("type");
 
-    if (verificar == "password") {
-        typePassword.setAttribute('type', 'text');
-    } else if (verificar == 'text') {
-        typePassword.setAttribute('type', 'password');
+        if (verificar == "password") {
+            typePassword.setAttribute('type', 'text');
+        } else if (verificar == 'text') {
+            typePassword.setAttribute('type', 'password');
+        }
     }
-}
 
