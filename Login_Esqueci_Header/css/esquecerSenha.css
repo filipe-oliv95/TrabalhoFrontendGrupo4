@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap%27');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
+    font-family: "Gill" sans-serif;
 }
 
 :root {
@@ -38,11 +37,6 @@
 
 a .nav-item {
     font-weight: bold;
-}
-
-body {
-    color: var(--preto);
-    margin-top: 90px;
 }
 
 body {
@@ -81,11 +75,13 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 input {
     padding: 15px;
-    font-size: 1.3em;
+    font-size: 20px;
     border: 1px solid var(--third-color);
     margin-bottom: 20px;
     margin-top: 5px;
@@ -99,21 +95,8 @@ input {
 }
 
 label {
-    font-size: 1.2em;
+    font-size: 25px;
     font-weight: 600;
-}
-
-a {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-size: 1.2em;
-    color: var(--first-color);
-    cursor: pointer;
-}
-
-a:hover {
-    color: var(--second-color);
 }
 
 .divSenha {
@@ -136,7 +119,7 @@ a:hover {
 .btn {
     background-color: var(--first-color);
     color: var(--white-color);
-    font-size: 1.3rem;
+    font-size: 20px;
     font-weight: 600;
     transition: all linear 16ms;
     cursor: pointer; 
