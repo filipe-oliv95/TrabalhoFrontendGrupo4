@@ -1,0 +1,280 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* HEADER */
+
+
+.navbar-brand {
+    font-size: 3rem;
+    font-weight: bold;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.logo {
+    margin: 0;
+    max-width: 150px;
+}
+
+.offcanvas-body {
+    font-size: 20px;
+}
+
+.navbar-toggler-icon {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url("../img/background-img/hamburguer.png");
+}
+
+.navbar-toggler {
+    border: 1px solid rgb(225, 225, 225);
+
+}
+
+/* .navbar-brand img {
+    max-width: 150px;
+    border: 1px solid red;
+    height: auto;
+    width: 30%;
+} /
+
+a .nav-item {
+    font-weight: bold;
+}
+
+body {
+    color: var(--preto);
+    margin-top: 90px;
+}
+/HEADER*/
+
+
+/* FOOTER */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap%27%27');
+
+#footerContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    border-top: 1px solid gray;
+}
+
+#footerLogo img {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100px;
+    border-radius: 0;
+    border: 0;
+}
+
+#footerLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    
+}
+
+#contact img {
+    width: 30px;
+    height: 30px;
+    border: 0;
+}
+
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact p {
+    margin: 0;
+}
+
+#contact1 {
+    display: flex;
+    min-width: 295px;
+}
+
+#nets img {
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+
+}
+
+#nets {
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly 15px;
+    align-items: end;
+    position: relative;
+    bottom: 20px;
+    left: 50px;
+
+}
+
+#logo-serratec img {
+    width: 100%;
+    border: 0;
+    padding: 10px;
+}
+
+#logo-serratec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+#logo-img {
+    display: flex;
+    min-height: 100%;
+    width: 50px;
+    position: relative;
+    left: 20px;
+}
+
+#arrow-img {
+    display: flex;
+    min-height: 100%;
+    width: 80px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#up-arrow img {
+    width: 50px;
+    height: 50px;
+    border: 0;
+}
+
+
+#up-arrow {
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+
+}
+
+#Copy {
+
+    border-top: 1px solid gray;
+    text-align: center;
+    padding: 10px 0;
+
+}
+
+#Copy p {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ABOUT US */
+
+.backgound::before {
+    font-family: inherit;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("./img/image/background.png");
+    /* min-height: 50vh; */
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.backgound {
+    height: 400px;
+}
+
+
+.container-fluid {
+    background-color: white;
+    margin: 0;
+    padding: 0%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.information {
+    display: flex;
+    min-height: 230px;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 26.17% 50%, #ffffff 0, #ffffff 12.5%, #fffbfc 25%, #f8e9ec 37.5%, #ad5573 50%, #ad5577 62.5%, #ad5581 75%, #ad5585 87.5%, #ad5590 100%);
+    border-top: 2px solid gray;
+}
+
+
+.Photo {
+    display: flex;
+    width: 100px;
+}
+
+.Photo img {
+    border-radius: 50%;
+    min-height: 100px;
+    min-width: 100px;
+}
+
+.About img {
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+}
+
+
+.About {
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+}
