@@ -26,19 +26,12 @@
     font-size: 20px;
 }
 .navbar-toggler-icon {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url("../img/background-img/hamburguer.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url("../assets/background-img/hamburguer.png");
 }
 .navbar-toggler {
     border: 1px solid rgb(225, 225, 225);
 
 }
-
-/* .navbar-brand img {
-    max-width: 150px;
-    border: 1px solid red;
-    height: auto;
-    width: 30%;
-} */
 
 a .nav-item {
     font-weight: bold;
@@ -49,8 +42,6 @@ body {
     margin-top: 90px;
 }
 /*HEADER*/
-
-
 
 
 #container-main {
@@ -68,27 +59,28 @@ body {
 
 #text {
     text-transform: uppercase;
+    color: var(--black-color);
+    text-align: center;
 }
 
 .text1 {
-    font-size: 15px;
+    font-size: 30px;
 }
 
 .text2 {
-    font-size: 25px;
+    font-size: 50px;
 }
 
 .text3 {
-    font-size: 10px;
+    font-size: 20px;
 }
 
 h2 {
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-size: 32px;
 }
 
-p {
-    font-size: 15px
-}
+
 
 #container-home-1 h2 {
     text-align: center;
@@ -107,21 +99,26 @@ p {
     flex-direction: column;
     align-items: center;
 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/background-img/background6.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../assets/background-img/background6.png");
     background-size: cover;
     background-position: center center;
 }
 
 .shop-button {
-    /* padding: 10px */
-    margin-top: 50px;
-    width: 150px;
-    height: 30px;
-    /* border-radius: 0; */
-    background-color: var(--first-color);
+    color: #fff;
     text-transform: uppercase;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: var(--first-color);
     cursor: pointer;
-}
+    transition: all 0.3s ease;
+  }
+  .shop-button:hover{
+    background: var(--second-color);
+  }
 
 /* -------------------------------------------------------------------- */
 /* --------------------------container-home2--------------------------- */
@@ -133,8 +130,16 @@ p {
     padding: 10px;
 }
 
+#container-home-2 p {
+    font-size: 20px;
+}
+
 #container-home-2 {
-    border: 3px solid red;
+    /* background-color: var(--third-color); */
+    background: radial-gradient(circle at 10% 43%, #ffffff 0, #ffffff 12.5%, #fffbfc 25%, #f8e9ec 37.5%, #ad5573 50%, #ad5577 62.5%, #ad5581 75%, #ad5585 87.5%, #ad5590 100%);
+    font-size: 100px;
+    /* border: 3px solid red; */
+    padding-bottom: 10px;
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -144,7 +149,7 @@ p {
 }
 
 #description {
-    border: 3px solid green;
+    /* border: 3px solid green; */
     margin: 0;
     height: 100%;
     min-width: 30%;  
@@ -169,11 +174,9 @@ p {
     .carousel-item .img-fluid {
         max-width: 200px;
     }
+  
   }
 
-.title-bt {
-    border: 3px solid green;
-}
 
 /*********************************************************************/
 /* Bootstrap 4 Multiple Item Carousel */
@@ -227,9 +230,6 @@ p {
     transform: translateX(0);
 }
 
-.carousel-inner {
-    border: 2px solid rgb(0, 68, 255);
-}
 
 .col-lg-2, .col-md-3 {
     margin: 0 !important;
@@ -242,7 +242,7 @@ p {
 
 .container {
     margin: 0 !important;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     height: 100% !important;
 }
 
