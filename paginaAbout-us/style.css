@@ -1,13 +1,3 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-/* HEADER */
-
-
 .navbar-brand {
     font-size: 3rem;
     font-weight: bold;
@@ -15,8 +5,6 @@
     margin: 0;
     padding: 0;
 }
-
-
 
 .logo {
     margin: 0;
@@ -28,22 +16,35 @@
 }
 
 .navbar-toggler-icon {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url("../img/background-img/hamburguer.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url("./assents/backgroud/hamburguer.png");
 }
 
 .navbar-toggler {
     border: 1px solid rgb(225, 225, 225);
-
 }
 
-/* .navbar-brand img {
-    max-width: 150px;
-    border: 1px solid red;
-    height: auto;
-    width: 30%;
-} /
-
 a .nav-item {
+    font-weight: bold;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar-brand{
+    font-size: 3rem;
+    font-weight: bold;
+    color: red;
+}
+
+.offcanvas-body{
+    font-size: 20px;
+}
+
+a .nav-item{
     font-weight: bold;
 }
 
@@ -51,49 +52,44 @@ body {
     color: var(--preto);
     margin-top: 90px;
 }
-/HEADER*/
-
 
 /* FOOTER */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap%27%27');
-
-#footerContainer {
+#container-footer {
     display: flex;
-    width: 100%;
-    flex-direction: column;
-    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%; 
     margin: 0;
-    padding: 0;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
+    padding: 2rem 4rem;
 }
 
-#footer1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100%;
-    border-top: 1px solid gray;
-}
-
-#footerLogo img {
+#container-footer-logo {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 100px;
-    border-radius: 0;
+    justify-content: center;
+    height: 100%;
+    padding: 15px;
+}
+
+#container-footer-logo img {
+    display: flex;
+    flex-direction: column;
     border: 0;
 }
 
-#footerLogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100%;
-    
+.logo-g4-figurinhas {
+    width: 100%;
+    height: 100px;
 }
+
+.logo-g4-figurinhas img {
+    min-width: 150px;
+    min-height: 80px;
+    max-width: 250px;
+    max-height: 100px;
+}
+
 
 #contact img {
     width: 30px;
@@ -117,77 +113,40 @@ body {
     min-width: 295px;
 }
 
-#nets img {
+#social-media-icons img {
     margin: 0;
     padding: 0;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
-
 }
 
-#nets {
+#social-media-icons {
     display: flex;
-    height: 100%;
-    justify-content: space-evenly 15px;
-    align-items: end;
-    position: relative;
-    bottom: 20px;
-    left: 50px;
-
+    width: 100%;
+    min-height: 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
 }
 
 #logo-serratec img {
     width: 100%;
     border: 0;
-    padding: 10px;
+    padding: 15px;
 }
 
 #logo-serratec {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100%;
-
+    min-width: 245px;
 }
 
-#logo-img {
-    display: flex;
-    min-height: 100%;
-    width: 50px;
-    position: relative;
-    left: 20px;
-}
-
-#arrow-img {
-    display: flex;
-    min-height: 100%;
-    width: 80px;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-#up-arrow img {
-    width: 50px;
-    height: 50px;
-    border: 0;
-}
-
-
-#up-arrow {
-    width: 30px;
-    height: 30px;
-    text-decoration: none;
-
-}
 
 #Copy {
-
     border-top: 1px solid gray;
     text-align: center;
     padding: 10px 0;
-
 }
 
 #Copy p {
@@ -195,7 +154,10 @@ body {
     margin: 0;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
+
+
 
 
 /* ABOUT US */
@@ -210,7 +172,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("./img/image/background.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("./assents/backgroud/backgound.png");
     /* min-height: 50vh; */
     height: 400px;
     background-repeat: no-repeat;
@@ -237,6 +199,7 @@ body {
 
 .information {
     display: flex;
+    flex-wrap: wrap;
     min-height: 230px;
     justify-content: center;
     align-items: center;
@@ -247,13 +210,16 @@ body {
 
 .Photo {
     display: flex;
-    width: 100px;
+    width: 150px;
+    
 }
 
 .Photo img {
+   
     border-radius: 50%;
     min-height: 100px;
     min-width: 100px;
+    padding: 10px;
 }
 
 .About img {
@@ -276,5 +242,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 350px;
+    width:800px;
 }
+
+.text p{
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+}
+    
+
+
+#divfix {
+    bottom: 0;
+    right: 0;
+    padding: 0px;
+    position: fixed;
+ 
+}
+#up-arrow img{
+    height: 150px;
+    width: 150px;
+}
+
+#up-arrow img:hover{
+    content: url("./assents/icons/upward-wine.png");
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+   }
