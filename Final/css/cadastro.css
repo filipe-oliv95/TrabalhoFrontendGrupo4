@@ -20,7 +20,7 @@
 }
 
 .navbar-toggler-icon {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url("../assets/assets cadastro/background-img/hamburguer.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url("../assets/background-img/hamburguer.png");
 }
 
 .navbar-toggler {
@@ -76,7 +76,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-image: url("../assets/assets cadastro/background.jpg");
+    background-image: url("../assets/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -164,7 +164,7 @@ a:hover {
     border: none;
     cursor: pointer;
 
-    background-image: url("../assets/assets cadastro/olho.png");
+    background-image: url(../assets/olho.png);
     background-color: var(--branco);
     background-repeat: no-repeat;
     background-size: cover;
@@ -199,7 +199,7 @@ a:hover {
     border: none;
     cursor: pointer; 
 
-    background-image: url("../assets/assets cadastro/olho.png");
+    background-image: url(../assets/olho.png);
     background-color: var(--branco);
     background-repeat: no-repeat;
     background-size: cover;
@@ -366,7 +366,7 @@ a{
 }
 
 #up-arrow img:hover{
-    content: url("../assets/assets cadastro/button/upward-wine.png");
+    content: url("../assets/button/upward-wine.png");
      background-repeat: no-repeat;
      background-position: center;
      background-size: cover;
