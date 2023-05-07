@@ -170,8 +170,8 @@ const categories = [
 
 inicializarShowcase = () => {
     var showcaseContainer = document.getElementById('showcaseContainer');
-    stickers.map((val)=>{
-        showcaseContainer.innerHTML+= `
+    stickers.map((val) => {
+        showcaseContainer.innerHTML += `
         
         <div class="sticker">
             <img src=${encodeURI(val.img)} />
@@ -188,13 +188,13 @@ inicializarShowcase();
 refreshCart = () => {
     var cartContainer = document.getElementById('cartContainer');
     cartContainer.innerHTML = "";
-    stickers.map((val)=>{
+    stickers.map((val) => {
         if (val.quantity > 0) {
-            
+
         }
-        cartContainer.innerHTML+= `
+        cartContainer.innerHTML += `
         
-        <p>${val.name}| quantidade: `+val.quantity+`</p>
+        <p>${val.name}| quantidade: ` + val.quantity + `</p>
         <hr>
     `;
     })
@@ -202,8 +202,8 @@ refreshCart = () => {
 
 var links = document.getElementsByTagName('a');
 
-for(var i = 0; i < links.length; i++){
-    links[i].addEventListener("click",function(){
+for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function () {
         let key = this.getAttribute('key');
         stickers[key].quantity++;
         refreshCart();
@@ -213,7 +213,20 @@ for(var i = 0; i < links.length; i++){
 
 document.getElementById("productSearchBtn").addEventListener('click', (e) => {
     e.preventDefault();
-    categorySearch();
+
+    const searchValue = document.getElementById("search").value;
+    const checkPlayers = stickers.filter(stickers => stickers.name.toLocaleLowerCase().includes(searchValue.toLowerCase()));
+    const checkCategories = categories.filter(categories => categories.name.toLowerCase().includes(searchValue.toLowerCase()));
+
+    if (checkPlayers.length > 0) {
+        playerSearch();
+    }
+    else if (checkCategories.length > 0) {
+        categorySearch();
+    }
+    else {
+        alert("Não foi póssivel concluir a busca")
+    }
 })
 
 window.onload = () => {
@@ -233,23 +246,43 @@ window.onload = () => {
 
 const categorySearch = () => {
     const searchValue = document.getElementById("search").value;
-    const filteredCategories = categories.filter(categories => categories.name.toLowerCase().includes(searchValue.toLowerCase()));
+    const filterPlayers = stickers.filter(stickers => stickers.country.toLocaleLowerCase().includes(searchValue.toLowerCase()));
     var htmlString = "";
 
-    if(filteredCategories.length > 0) {
-        filteredCategories.forEach(categories => {
-            htmlString += `<div class="categoryContainer">
-                <img src=${categories.img}">
-                <div class="contentContainer">
-                    <span class="title">${categories.name}</span>
-                </div>
-            </div>`
+    if (filterPlayers.length > 0) {
+        filterPlayers.forEach(stickers => {
+            htmlString += `<div class="sticker">
+                            <img src="${stickers.img}">
+                            <p>${stickers.name}</p>
+                            <p>${stickers.country}</p>
+                            <a key="${stickers.id}" href="../html/carrinho.html">Carrinho</a>
+                            </div>`
         })
     } else {
         htmlString = "<span class='noCategoryFound'>Nenhuma categoria encontrada... </span>"
     }
-
-    document.getElementById("categoriesContainer").innerHTML = htmlString
+    document.getElementById("showcaseContainer").innerHTML = htmlString
     document.getElementById("search").value = ""
 }
 
+//Buscar por nome do jogador
+
+const playerSearch = () => {
+    const searchValue = document.getElementById("search").value;
+    const filterPlayers = stickers.filter(stickers => stickers.name.toLocaleLowerCase().includes(searchValue.toLowerCase()));
+    var htmlString = "";
+
+    if (filterPlayers.length > 0) {
+        filterPlayers.forEach(stickers => {
+            htmlString += `<div class="sticker">
+                            <img src=${stickers.img}>
+                            <p>${stickers.name}</p>
+                            <p>${stickers.country}</p>
+                            <a key="${stickers.id}" href="../html/carrinho.html"></a>
+                            </div>`
+        })
+
+        document.getElementById("showcaseContainer").innerHTML = htmlString
+        document.getElementById("search").value = ""
+    }
+}
