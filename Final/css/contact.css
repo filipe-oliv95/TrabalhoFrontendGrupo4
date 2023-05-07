@@ -1,5 +1,4 @@
 /* Google Font CDN Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 *{
   margin: 0;
@@ -29,22 +28,32 @@
   border: 1px solid rgb(225, 225, 225);
 }
 
+.navbar-toggler-icon {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url("../assets/background-img/hamburguer.png");
+}
+
+.navbar-toggler {
+  border: 1px solid rgb(225, 225, 225);
+
+}
+
 a .nav-item {
   font-weight: bold;
 }
 
 main{
   margin-top: 90px;
-  min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: #c8e8e9;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
   background-image: url(./assets/Captura\ de\ tela\ 2023-04-29\ 160115.png);
 
 }
 .container{
+  margin-top: 100px !important;
+  margin-bottom: 100px !important;
   width: 85%;
   height: 100%;
   background: #fff;
@@ -283,3 +292,27 @@ main{
   align-items: center;
   text-align: center;
 }
+
+/*BUTTOM-UP-ARROW*/
+
+#divfix {
+  bottom: 0;
+  right: 0;
+  padding: 0px;
+  position: fixed;
+  /* z-index: 3000; */
+}
+#up-arrow img{
+  height: 150px;
+  width: 150px;
+}
+
+#up-arrow img:hover{
+  content: url("../assets/img/footer-img/upward-wine.png");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+ }
+
+
+/*BUTTOM-UP-ARROW*/
