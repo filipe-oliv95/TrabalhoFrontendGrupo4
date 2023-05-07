@@ -202,14 +202,16 @@ refreshCart = () => {
 
 var links = document.getElementsByTagName('a');
 
-for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener("click", function () {
-        let key = this.getAttribute('key');
+document.getElementById("showcaseContainer").addEventListener("click", function (event) {
+    event.preventDefault();
+    var target = event.target;
+
+    if (target.tagName === "A") {
+        let key = target.getAttribute("key");
         stickers[key].quantity++;
         refreshCart();
-        return false;
-    })
-}
+    }
+});
 
 document.getElementById("productSearchBtn").addEventListener('click', (e) => {
     e.preventDefault();
@@ -227,6 +229,8 @@ document.getElementById("productSearchBtn").addEventListener('click', (e) => {
     else {
         alert("Não foi póssivel concluir a busca")
     }
+
+    addClickEvents();
 })
 
 window.onload = () => {
@@ -255,7 +259,7 @@ const categorySearch = () => {
                             <img src="${stickers.img}">
                             <p>${stickers.name}</p>
                             <p>${stickers.country}</p>
-                            <a key="${stickers.id}" href="../html/carrinho.html">Carrinho</a>
+                            <a key="${stickers.id}" href="#">Carrinho</a>
                             </div>`
         })
     } else {
@@ -278,7 +282,7 @@ const playerSearch = () => {
                             <img src=${stickers.img}>
                             <p>${stickers.name}</p>
                             <p>${stickers.country}</p>
-                            <a key="${stickers.id}" href="../html/carrinho.html">Carrinho</a>
+                            <a key="${stickers.id}" href="#">Carrinho</a>
                             </div>`
         })
 
