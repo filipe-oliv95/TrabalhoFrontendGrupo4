@@ -177,6 +177,7 @@ inicializarShowcase = () => {
             <img src=${encodeURI(val.img)} />
             <p>${val.name}</p>
             <p>${val.country}</p>
+            <p>R$ 0,80</p>
             <a key=${val.id} href="#">Adicionar ao carrinho!</a>
         </div>
     `;
@@ -259,6 +260,7 @@ const categorySearch = () => {
                             <img src="${stickers.img}">
                             <p>${stickers.name}</p>
                             <p>${stickers.country}</p>
+                            <p>R$ 0,80</p>
                             <a key="${stickers.id}" href="#">Carrinho</a>
                             </div>`
         })
@@ -282,6 +284,7 @@ const playerSearch = () => {
                             <img src=${stickers.img}>
                             <p>${stickers.name}</p>
                             <p>${stickers.country}</p>
+                            <p>R$ 0,80</p>
                             <a key="${stickers.id}" href="#">Carrinho</a>
                             </div>`
         })
